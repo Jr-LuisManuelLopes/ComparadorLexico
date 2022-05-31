@@ -18,7 +18,7 @@ import javafx.scene.control.TextField;
 
 public class homeController implements Initializable {
     
-    Especificos especifico = new Especificos();
+    TokensClass tokens = new TokensClass();
     
     @FXML
     private Label labelTokenEspecific;
@@ -44,11 +44,11 @@ public class homeController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         String[] word = parametro.getText().split("-");
         for (int i = 0; i < word.length; i++) {
-            if (especifico.tokenSEspecificos(word[i])) {
+            if (tokens.tokenSEspecificos(word[i])) {
                 listViewEspecificos.getItems().add(word[i]);
-            }else if (especifico.tokensTipo(word[i])){
+            }else if (tokens.tokensTipo(word[i])){
             	listViewTipo.getItems().add(word[i]);
-            }else if(especifico.tokensLetras(word[i])){
+            }else if(tokens.tokensLetras(word[i])){
             	listViewLetras.getItems().add(word[i]);
             }else{
             	listViewNoEncontrado.getItems().add(word[i]);

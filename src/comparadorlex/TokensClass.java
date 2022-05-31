@@ -8,11 +8,7 @@ package comparadorlex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *
- * @author Luis Manuel
- */
-public class Especificos {
+public class TokensClass {
     
     boolean tokensLetras(String valor){
         Pattern tipoFuncion = Pattern.compile("([a-zA-Z]\\w+)|([a-zA-Z])");
